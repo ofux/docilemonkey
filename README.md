@@ -15,7 +15,7 @@ It can also help to test circuit breakers.
 
 Docile Monkey is available here for convenience: https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey
 
-Example: `https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey?s=500`
+Example: `https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey?s=500&t=200ms&b={"foo":"bar"}`
 
 **Do not call it from your automated tests.**
 
