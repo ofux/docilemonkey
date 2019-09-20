@@ -22,7 +22,14 @@ It can also help to test circuit breakers.
 
 Docile Monkey is available here for convenience: https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey
 
-Example: `https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey?s=500&t=200ms&b={"foo":"bar"}`
+Examples: 
+```sh
+curl -v 'https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey?s=418&t=20ms'
+
+curl -v -X POST \
+  'https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey?s=418&t=20ms&bb=1' \
+  -d '{ "foo": "bar" }'
+```
 
 **Do not call it from your automated tests.**
 
