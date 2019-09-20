@@ -3,6 +3,7 @@ package docilemonkey
 import (
 	"io/ioutil"
 	"net/http"
+	"net/http/httptest"
 	"strconv"
 	"time"
 )
@@ -33,4 +34,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			_, _ = w.Write(body)
 		}
 	}
+}
+
+func NewTestServer() *httptest.Server {
+	return httptest.NewServer(http.HandlerFunc(Handler))
 }

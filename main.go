@@ -2,13 +2,14 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/ofux/docilemonkey/docilemonkey"
 	"log"
 	"net/http"
 )
 
 func main() {
-	var addr = *flag.String("listen", ":8080", "server port")
+	var port = *flag.Int("port", 8080, "server port")
 
 	http.HandleFunc("/", docilemonkey.Handler)
 
@@ -25,9 +26,9 @@ Example of request:
 	GET http://localhost:8080/foo/bar?s=201&t=500ms&b={"hello":"world"}
 
 `)
-	log.Printf("Listening on %s...\n", addr)
+	log.Printf("Listening on port %s...\n", port)
 	log.Println(`====================================================`)
-	if err := http.ListenAndServe(addr, nil); err != nil {
+	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
 		log.Fatal(err)
 	}
 }
