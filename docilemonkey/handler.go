@@ -27,10 +27,10 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if paramBody := r.URL.Query().Get("b"); paramBody != "" {
-		w.Write([]byte(paramBody))
+		_, _ = w.Write([]byte(paramBody))
 	} else if paramBodyBack := r.URL.Query().Get("bb"); paramBodyBack == "1" {
 		if body, err := ioutil.ReadAll(r.Body); err == nil {
-			w.Write(body)
+			_, _ = w.Write(body)
 		}
 	}
 }
