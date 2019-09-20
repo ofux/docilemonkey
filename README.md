@@ -13,11 +13,13 @@ It can also help to test circuit breakers.
 
 ### SAAS
 
-Docile Monkey is available here for convenience: 
+Docile Monkey is available here for convenience: https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey
+
+Example: `https://europe-west1-miscellaneous-ofux-stuff.cloudfunctions.net/docilemonkey?s=500`
 
 **Do not call it from your automated tests.**
 
-**Do not abuse or I will stop providing this server.**
+**Do not abuse or I will stop providing this endpoint.**
 
 If you plan to do many calls to this server, get it and deploy it on your own infrastructure (see below).
 
