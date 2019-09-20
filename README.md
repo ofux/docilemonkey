@@ -9,6 +9,13 @@ For example, you may use it to easily check how your application reacts when it 
 or when the server takes a lot of time to respond.
 It can also help to test circuit breakers.
 
+## Query params
+
+- `s` will be the HTTP status code of the response (ex: 200, 404, 500, etc.)
+- `t` time to wait before responding (ex: 10s, 200ms, etc.)
+- `b` will be the body of the response
+- `bb` if parameter 'b' has no value and if bb=1 then the body of the request (if any) will be sent back in the response
+
 ## Usage
 
 ### SAAS
